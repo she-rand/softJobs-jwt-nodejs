@@ -13,7 +13,6 @@ const Profile = () => {
     axios.get(ENDPOINT.users, { headers: { Authorization: `Bearer ${token}` } })
       .then(( data ) =>{
         const user=data.data.user
-        console.log("hola"+ JSON.stringify(user));
         setDeveloper({ ...user });
       })
       .catch((response) => {
